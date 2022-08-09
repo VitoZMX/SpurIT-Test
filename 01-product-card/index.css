@@ -16,6 +16,8 @@ body {
 .name_page {
     font-family: 'Arial';
     font-size: 48px;
+    font-weight: 900;
+    line-height: 72px;
 }
 
 .product_card {
@@ -30,9 +32,33 @@ body {
 
 .product_bgr {
     border-radius: 12px 12px 0 0;
-    min-height: 200px;
+    min-height: 214px;
     background-image: url(Image.png);
-    height: 214px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-family: 'Arial';
+    font-size: 16px;
+    margin: 16px 0 0 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #2F2F2F;
+    border-radius: 8px;
+    padding: 3px 16px;
+}
+
+.tag_new {
+    background-color: #FDCFF3;
+
+}
+
+.tag_last {
+    background-color: #FFCF56;
 }
 
 .product_info {
@@ -50,7 +76,11 @@ body {
 
 .name_product {
     font-family: 'Arial';
-    font-size: 21px;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 36px;
+    font-style: normal;
+    color: #2F2F2F;
 }
 
 .description_product {
@@ -58,9 +88,12 @@ body {
     font-size: 16px;
     margin-top: 16px;
     font-weight: 400;
+    line-height: 24px;
+    color: #2F2F2F;
 }
 
 .btn {
+    margin-top: 24px;
     height: 48px;
     width: 100%;
     border: solid 2px #42940F;
