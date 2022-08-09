@@ -11,6 +11,7 @@ body {
     padding-top: 40px;
     display: flex;
     justify-content: center;
+    margin: 0 -10px;
 }
 
 .name_page {
@@ -26,8 +27,8 @@ body {
     flex-direction: column;
     background: #FFFFFF;
     border-radius: 12px;
-    box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.18);
-    margin-right: 20px;
+    box-shadow: 0 0 45px -4px rgba(0, 0, 0, 0.18);
+    margin: 0 10px;
 }
 
 .product_bgr {
@@ -54,7 +55,6 @@ body {
 
 .tag_new {
     background-color: #FDCFF3;
-
 }
 
 .tag_last {
@@ -129,5 +129,3 @@ body {
     border: #4E4E4E;
     color: white;
 }
-
-
