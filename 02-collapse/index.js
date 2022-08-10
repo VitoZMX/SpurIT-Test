@@ -1,36 +1,41 @@
 const showCollapse = document.getElementsByClassName('collapsible__action--visible')[0]
 const hideCollapse = document.getElementsByClassName('collapsible__action--hidden')[0]
-const anim = document.getElementsByClassName('collapsible__content')[0].querySelector('p').animate(
+const btn = document.getElementsByClassName('collapsible__button')[0]
+const container = document.getElementsByClassName('collapsible__content')[0]
+const containerText = container.querySelector('p')
+const animateStyle = container.animate(
     {
-        height: ["0px", "200px"],
-        width: ['200px', '200px'],
-        opacity: ['0', "1"],
-        background: "rgba(255,103,0,0.52)",
+        borderRadius: ['0px', '12px'],
+        height: ['0', '90px'], // или auto
+        width: ['300px', '300px'],
+        transition: ["0.3s", "0.9s"],
+        overflow: ['hidden', 'hidden'],
+        background: ['rgba(221,0,255,0.67)'],
+        marginTop: '10px',
     },
-    {duration: 300, fill: "both", easing: "ease-out"}
+    {duration: 400, fill: "both", easing: "ease-out"},
 )
 
+containerText.style.padding = "10px"
+containerText.style.margin = "0"
 showCollapse.style.display = "none"
 
-hideCollapse.addEventListener('click', () => {
-    if (anim.playState === "paused") {
-        anim.play();
+animateStyle.pause()
+
+btn.addEventListener('click', () => {
+
+    if (animateStyle.playState === "paused") {
+        animateStyle.play()
     } else {
-        anim.reverse();
+        animateStyle.reverse()
     }
-    showCollapse.style.display = "block"
-    hideCollapse.style.display = "none"
-    console.log("клик показать")
-})
 
-showCollapse.addEventListener('click', () => {
-    anim.reverse();
-    hideCollapse.style.display = "block"
-    showCollapse.style.display = "none"
-    console.log("click скрыть")
-})
+    if (hideCollapse.style.display === "none") {
+        hideCollapse.style.display = "block"
+        showCollapse.style.display = "none"
+    } else {
+        hideCollapse.style.display = "none"
+        showCollapse.style.display = "block"
+    }
 
-console.log(anim)
-console.log(showCollapse)
-console.log(hideCollapse)
-console.log(anim.playState)
+})
