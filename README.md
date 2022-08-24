@@ -1,3 +1,8 @@
+
+1. https://vitozmx.github.io/SpurIT-Test/01-product-card/index.html
+2. https://vitozmx.github.io/SpurIT-Test/02-collapse/index.html
+3. https://vitozmx.github.io/SpurIT-Test/03-fix-problems/index.html
+
 # Тестовое задание 
 
 ## Как попасть на курс?
